@@ -50,6 +50,6 @@ budgets_configuration = {
                 recipients : "<REPLACE-WITH-EMAIL-ADDRESS>"
                 message : "Forecast spending exceeds budget."
             }
-        }    
-    }    
+        }
+    }
 }

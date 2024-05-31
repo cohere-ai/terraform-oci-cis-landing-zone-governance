@@ -29,10 +29,10 @@ tags_configuration = {
   cis_namespace_name : "cis-namespace"
   default_compartment_id : "<REPLACE-BY-TAG-NAMESPACE-COMPARTMENT-REFERENCE>"
   namespaces : {
-    VISION-NAMESPACE  : { 
+    VISION-NAMESPACE  : {
       name : "vision"
-      description : "Vision tag namespace."   
-      is_retired : false  
+      description : "Vision tag namespace."
+      is_retired : false
       tags : {
         COST-CENTER-TAG : {
           name : "cost-center"
@@ -57,7 +57,7 @@ tags_configuration = {
           name : "resource-id"
           description : "A random resource id, used to communicate any business-specific metadata about resources."
         }
-      } 
+      }
     }
   }
 }
@@ -74,10 +74,10 @@ tags_configuration = {
   cis_namespace_name : "cis-namespace"
   default_compartment_id : "TOP-CMP"
   namespaces : {
-    VISION-NAMESPACE  : { 
+    VISION-NAMESPACE  : {
       name : "vision"
-      description : "Vision tag namespace."   
-      is_retired : false  
+      description : "Vision tag namespace."
+      is_retired : false
       tags : {
         COST-CENTER-TAG : {
           name : "cost-center"
@@ -102,7 +102,7 @@ tags_configuration = {
           name : "resource-id"
           description : "A random resource id, used to communicate any business-specific metadata about resources."
         }
-      } 
+      }
     }
   }
 }

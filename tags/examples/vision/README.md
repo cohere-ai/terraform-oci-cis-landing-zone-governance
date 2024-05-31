@@ -14,7 +14,7 @@ If *Oracle-Tags* namespace is not defined in the tenancy, the example creates a 
 
 1. Rename *input.auto.tfvars.template* to *\<project-name\>.auto.tfvars*, where *\<project-name\>* is any name of your choice.
 
-2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions: 
+2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions:
    - Replace *\<REPLACE-BY-TAG-NAMESPACE-COMPARTMENT-OCID\>* placeholder with the compartment ocid for tag namespaces.
    - If applying tag defaults, replace *\<REPLACE-BY-COMPARTMENT-OCID\>* placeholders with actual compartment ocids. Otherwise, remove *tag_defaults* attributes altogether.
 
@@ -22,9 +22,9 @@ You can now skip directly to step 3. Read the rest to understand what is in the 
 
 The *tags_configuration* variable defines a Terraform object describing any set of OCI IAM defined_tags resources.
 The object is a three level map, with the first level defining the tag namespaces, the second level defining
-the tags and the third level defining tag defaults. Each map element is indexed by a unique string in uppercase, 
-like VISION-NAMESPACE, COST-CENTER-TAG, ENVIRONMENT-TAG, COST-CENTER-TAG-DEFAULT, etc. These strings can actually 
-be any random strings, but once defined they MUST NOT BE CHANGED, or Terraform will try to destroy and recreate 
+the tags and the third level defining tag defaults. Each map element is indexed by a unique string in uppercase,
+like VISION-NAMESPACE, COST-CENTER-TAG, ENVIRONMENT-TAG, COST-CENTER-TAG-DEFAULT, etc. These strings can actually
+be any random strings, but once defined they MUST NOT BE CHANGED, or Terraform will try to destroy and recreate
 the resources.
 
 The *cis_namespace_name* attribute, if defined, drives the creation of a namespace with *CreatedBy* and *CreatedOn* tags, unless
@@ -33,7 +33,7 @@ The *cis_namespace_name* attribute, if defined, drives the creation of a namespa
 Within the *tags* attribute:
 - *is_cost_tracking* defines whether the tag is used for cost tracking.
 - *is_retired* indicates whether the tag is retired. Retired tags are no longer applied to resources.
-- *valid_values* enforce the allowed values for the tag. 
+- *valid_values* enforce the allowed values for the tag.
 - *tag_defaults* define the compartments where to auto apply defaults or require a value from users.
    - *compartment_ocids*: list of compartments to apply defaults to.
    - *default_value*: the value to auto apply.

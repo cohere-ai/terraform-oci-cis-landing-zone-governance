@@ -28,11 +28,11 @@ home_region          = "<your tenancy home region>" # This is your tenancy home 
 tags_configuration = {
   cis_namespace_name : "cis-namespace"
   default_compartment_id : "<REPLACE-BY-TAG-NAMESPACE-COMPARTMENT-OCID>"
-  namespaces : {  
-    VISION-NAMESPACE  : { 
-      name : "vision",  
-      description : "Vision tag namespace.",    
-      is_retired : false,  
+  namespaces : {
+    VISION-NAMESPACE  : {
+      name : "vision",
+      description : "Vision tag namespace.",
+      is_retired : false,
       tags : {
         COST-CENTER-TAG : {
           name : "cost-center",
@@ -57,7 +57,7 @@ tags_configuration = {
           name : "resource-id",
           description : "A random resource id, used to communicate any business-specific metadata about resources.",
         }
-      } 
-    }  
+      }
+    }
   }
-}  
+}

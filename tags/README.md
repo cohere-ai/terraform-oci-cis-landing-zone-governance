@@ -65,7 +65,7 @@ experiments = [module_variable_optional_attrs]
 
 ## <a name="invoke">How to Invoke the Module</a>
 
-Terraform modules can be invoked locally or remotely. 
+Terraform modules can be invoked locally or remotely.
 
 For invoking the module locally, just set the module *source* attribute to the module file path (relative path works). The following example assumes the module is two folders up in the file system.
 ```
@@ -107,7 +107,7 @@ CIS recommended tags:
 Defining tag namespaces and tags:
 
 - **namespaces**: A map of tag namespaces.
-  - **name**: The tag namespace name.             
+  - **name**: The tag namespace name.
   - **description**: (Optional) The tag namespace description. It defaults to tag namespace *name* if undefined.
   - **compartment_id**: (Optional) The compartment id for the tag namespace. It defaults to *default_compartment_id* if undefined.
   - **is_retired**: (Optional) Whether the tag namespace is retired. Default: false.
@@ -118,13 +118,13 @@ Defining tag namespaces and tags:
     - **description**: (Optional) The tag description. It defaults to tag *name* if undefined.
     - **is_cost_tracking**: (Optional) Whether the tag is a cost tracking tag. Default: false.
     - **is_retired**: (Optional) Whether the tag is retired. Default: false.
-    - **valid_values**: (Optional) A list of valid values for the tag. If defined, any value assigned to the tag is checked against the list. 
+    - **valid_values**: (Optional) A list of valid values for the tag. If defined, any value assigned to the tag is checked against the list.
     - **tag_defaults**: (Optional) The tag default values to apply to the list of provided compartments.
       - **compartment_ids**: The list of compartments to apply the tag defaults.
       - **default_value**: The default value.
       - **is_user_required**: (Optional) When true, *default_value* is ignored and user must provide a value when creating a resource in the target compartment. When false or absent, *default_value* is applied. Default: false.
     - **defined_tags**: (Optional) The tag defined tags. It defaults to tag namespace *defined_tags* if undefined.
-    - **freeform_tags**: (Optional) The tag freeform tags. It defaults to tag namespace *freeform_tags* if undefined.  
+    - **freeform_tags**: (Optional) The tag freeform tags. It defaults to tag namespace *freeform_tags* if undefined.
 
 ### <a name="extdep">External Dependencies</a>
 

@@ -2,7 +2,7 @@
 
 ![Landing Zone logo](../landing_zone_300.png)
 
-This module manages budgets in Oracle Cloud Infrastructure (OCI) based on a single configuration object. Budgets are used to set soft limits on your OCI spending. A budget can be associated with an alert rule for pro-actively informing about imminent budget overruns. Budgets can be set on compartments or on cost-tracking tags, which are both supported by this module. 
+This module manages budgets in Oracle Cloud Infrastructure (OCI) based on a single configuration object. Budgets are used to set soft limits on your OCI spending. A budget can be associated with an alert rule for pro-actively informing about imminent budget overruns. Budgets can be set on compartments or on cost-tracking tags, which are both supported by this module.
 
 Check [module specification](./SPEC.md) for a full description of module requirements, supported variables, managed resources and outputs.
 
@@ -48,7 +48,7 @@ experiments = [module_variable_optional_attrs]
 ```
 ## <a name="invoke">How to Invoke the Module</a>
 
-Terraform modules can be invoked locally or remotely. 
+Terraform modules can be invoked locally or remotely.
 
 For invoking the module locally, just set the module *source* attribute to the module file path (relative path works). The following example assumes the module is two folders up in the file system.
 ```
@@ -83,11 +83,11 @@ The *default_* attributes are the following:
 
 ### Defining Budgets
 - **budgets**: A map of budgets.
-  - **name**: The budget name.             
+  - **name**: The budget name.
   - **description**: (Optional) The budget description. It defaults to budget *name* if undefined.
   - **target**: (Optional) The budget target (aka scope). If undefined, the target is of *type* "COMPARTMENT" with *value* equals to the tenancy OCID. It is an object made of the following attributes:
     - **type**: (Optional) The target type. Valid values: "COMPARTMENT" or "TAG". Default: "COMPARTMENT". If "TAG", the value in *values* attribute *must be a **cost tracking** tag*.
-    - **values**: (Optional) the target values. Although the attribute is of list data type, the Budget service currently supports only one value for a given *type*. If *type* is "COMPARTMENT", *values* should contain the target compartment OCID. If *values* is omitted, then the tenancy OCID is used as the compartment OCID. If *type* is "TAG", values must contain the cost-tracking tag in the format **"\<tag-namespace\>.\<tag-name\>.\<tag-value\>"**. For example: *"Oracle-Tags.CreatedBy.andre"*.  
+    - **values**: (Optional) the target values. Although the attribute is of list data type, the Budget service currently supports only one value for a given *type*. If *type* is "COMPARTMENT", *values* should contain the target compartment OCID. If *values* is omitted, then the tenancy OCID is used as the compartment OCID. If *type* is "TAG", values must contain the cost-tracking tag in the format **"\<tag-namespace\>.\<tag-name\>.\<tag-value\>"**. For example: *"Oracle-Tags.CreatedBy.andre"*.
   - **amount**: The budget amount in US dollars.
   - **schedule**: (Optional) The time settings when the budget applies. If undefined, the budget is set to apply on a recurring monthly basis, starting the moment when the budget is created. It is an object made of the following attributes:
     - **reset_period**: (Optional) The period the budget is reset. Only currently supported value is "MONTHLY".
@@ -102,7 +102,7 @@ The *default_* attributes are the following:
     - **description**: (Optional) The alert rule description. It defaults to "\<budget-description\> (alert rule)" if undefined.
     - **threshold_metric**: (Optional) The budget threshold metric, representing either actual spending or forecast spending. Valid values are "ACTUAL" or "FORECAST". Default: "ACTUAL".
     - **threshold_type**: (Optional) The budget threshold type, representing either percentage spending or absolute spending.  Valid values are "PERCENTAGE" or "ABSOLUTE". Default: "PERCENTAGE".
-    - **threshold_value**: The threshold value for triggering the alert. If *threshold_type* is "PERCENTAGE", the value is a percentage of the budget amount. 
+    - **threshold_value**: The threshold value for triggering the alert. If *threshold_type* is "PERCENTAGE", the value is a percentage of the budget amount.
     - **recipients**: The recipient email addresses for the alert rule message. Multiple recipients can be informed as comma-separated string.
     - **message**: The message that is sent to recipients when the alert is triggered.
     - **defined_tags**: (Optional) The alert rule defined tags. The budget *defined_tags* is used if undefined.

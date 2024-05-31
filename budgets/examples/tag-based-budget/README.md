@@ -6,7 +6,7 @@ This example shows how to manage budgets in Oracle Cloud Infrastructure using th
 
 1. Rename *input.auto.tfvars.template* to *\<project-name\>.auto.tfvars*, where *\<project-name\>* is any name of your choice.
 
-2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions: 
+2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions:
    - Replace *\<REPLACE-WITH-COST-TRACKING-TAG\>* placeholder with the cost tracking tag in the following format: **\<tag-namespace\>.\<tag-name\>.\<tag-value\>**, without the \< \> signs.
    - Replace *\<REPLACE-WITH-BUDGET-AMOUNT\>* placeholder with the budget amount.
    - Replace *\<REPLACE-WITH-THRESHOLD-VALUE\>* placeholder with the consumption amount that triggers the alert rule.

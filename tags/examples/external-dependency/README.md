@@ -27,7 +27,7 @@ The OCI Object Storage objects with the external dependencies are expected to ha
 
 1. Rename *input.auto.tfvars.template* to *\<project-name\>.auto.tfvars*, where *\<project-name\>* is any name of your choice.
 
-2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions: 
+2. Within *\<project-name\>.auto.tfvars*, provide tenancy connectivity information and adjust the *tags_configuration* input variable, by making the appropriate substitutions:
    - Replace *\<REPLACE-BY-TAG-NAMESPACE-COMPARTMENT-REFERENCE\>* placeholder with the compartment reference key in *\<REPLACE-BY-OBJECT-NAME-FOR-COMPARTMENTS\>* file.
    - If applying tag defaults, replace *\<REPLACE-BY-COMPARTMENT-REFERENCE\>* placeholder with the compartment reference key in *\<REPLACE-BY-OBJECT-NAME-FOR-COMPARTMENTS\>* file. Otherwise, remove *tag_defaults* attributes altogether.
    - Replace *\<REPLACE-BY-BUCKET-NAME\>* placeholder with the bucket name containing the object with compartment dependencies.
